@@ -2,7 +2,7 @@ require_relative "/Users/aa/w3d2/card.rb"
 
 class Board
     
-    attr_accessor :grid
+    attr_accessor :grid, :grid_reveal
 
     def initialize
 
@@ -38,6 +38,7 @@ class Board
         (1...grid.length).each do |row|
             (1...grid.length).each do |col|
                 if @grid[row][col] = " "
+
                     return false 
                 end 
             end 
@@ -52,6 +53,8 @@ class Board
             @grid[row][col] = @grid_reveal[row][col]
         end
     end
+
+    
 
 
 
